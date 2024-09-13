@@ -14,7 +14,9 @@ const Models = [
   // { title: 'jamoneroMacondo2', url: './gltf/jamoneroMacondo2.glb' },
   // { title: 'antorcha2', url: './antorcha2.glb', miEscala: .5, miPosicion: -0.3 },
   // { title: 'antorcha1', url: './antorcha1.glb', miEscala: .5, miPosicion: -0.3 },
-  { title: 'EKO', url: './EKO.glb', miEscala: .6, miPosicion: .0 },
+  { title: 'EKO plegable', url: './EKO.glb', miEscala: 1, miPosicion: .0 },
+  { title: 'EKO fijo', url: './EKO1.glb', miEscala: 1, miPosicion: .0 },
+  { title: 'ABIERTA', url: './ABIERTA.glb', miEscala: .9, miPosicion: -.2 },
   // { title: 'FRUTOS', url: './FRUTOS.glb', miEscala: 1.3, miPosicion: .2 },
 ]
 
@@ -68,12 +70,12 @@ export default function EstucheConAsas({ title, escala, posicion }) {
   return (
     <>
       <Canvas camera={{ position: [0, .4, -0.6], near: .01, fov: 50 }}>
-        {/* <pointLight position={[100, 100, 0]} intensity={95555} decay={2} />
-        <pointLight position={[-100, 100, 0]} intensity={95555} decay={2} />
-        <pointLight position={[-100, 100, 100]} intensity={91111} decay={2} />
-        <pointLight position={[100, -100, -100]} intensity={91111} decay={2} />
-        <pointLight position={[100, -100, 100]} intensity={91111} decay={2} /> */}
-        <ambientLight intensity={2} />
+        <pointLight position={[100, 100, 0]} intensity={22222} decay={2} />
+        <pointLight position={[-100, 100, 0]} intensity={22222} decay={2} />
+        <pointLight position={[-100, 100, 100]} intensity={44444} decay={2} />
+        <pointLight position={[100, -100, -100]} intensity={44444} decay={2} />
+        <pointLight position={[100, -100, 100]} intensity={44444} decay={2} />
+        {/* <ambientLight intensity={2} /> */}
         <Suspense fallback={<Fallback />}>
           {modelUrl && <Model url={modelUrl} miEscala={modelEscala} miPosicion={modelPosicion} />}
         </Suspense>
